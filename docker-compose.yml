@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  task_for_parsing:
+    container_name: task_for_parsing
+    image: .
+    restart: always
+    command: scripts/start_script.sh
+    volumes:
+      - ./application/parsing_groups_dev.db:/app/application/parsing_groups_dev.db
+
